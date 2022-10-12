@@ -1,30 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import reactLogo from './assets/react.svg';
+import './App.css';
+import gsap from 'gsap';
 
-function App() {
-    const [count, setCount] = useState(0)
+function App() { 
 
     return (
         <div className="App">
-            <div>
+            <div className="flex flex-col w-full items-center">
                 <a href="https://vitejs.dev" target="_blank">
-                    <img src="/vite.svg" className="logo" alt="Vite logo" />
+                    <img src="/vite.svg" className="logo w-[200px] h-[200px]" alt="Vite logo" />
                 </a>
                 <a href="https://reactjs.org" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
+                    <img
+                        src={reactLogo}
+                        className="logo react w-[200px] h-[200px]"
+                        alt="React logo"
+                    />
                 </a>
             </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-            {/* <h1 className="text-3xl font-bold underline text-white-300">Hello world!</h1> */}
         </div>
     )
 }
